@@ -3,7 +3,7 @@
 <HTML>
 <HEAD>
 <TITLE>
-Helpers (Beryl API)
+StringUtils (Beryl API)
 </TITLE>
 
 
@@ -13,7 +13,7 @@ Helpers (Beryl API)
 function windowTitle()
 {
     if (location.href.indexOf('is-external=true') == -1) {
-        parent.document.title="Helpers (Beryl API)";
+        parent.document.title="StringUtils (Beryl API)";
     }
 }
 </SCRIPT>
@@ -38,7 +38,7 @@ function windowTitle()
   <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
   <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
   <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
-  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="class-use/Helpers.html"><FONT CLASS="NavBarFont1"><B>Use</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="class-use/StringUtils.html"><FONT CLASS="NavBarFont1"><B>Use</B></FONT></A>&nbsp;</TD>
   <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
   <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
   <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
@@ -66,11 +66,11 @@ $.beautyOfCode.init({
 
 <TR>
 <TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
-&nbsp;PREV CLASS&nbsp;
-&nbsp;NEXT CLASS</FONT></TD>
+&nbsp;<A HREF="../../../org/beryl/util/Reflection.html" title="class in org.beryl.util"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;<A HREF="../../../org/beryl/util/TryParse.html" title="class in org.beryl.util"><B>NEXT CLASS</B></A></FONT></TD>
 <TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
-  <A HREF="../../../index.html?org/beryl/intents/Helpers.html" target="_top"><B>FRAMES</B></A>  &nbsp;
-&nbsp;<A HREF="Helpers.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+  <A HREF="../../../index.html?org/beryl/util/StringUtils.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="StringUtils.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
 &nbsp;<SCRIPT type="text/javascript">
   <!--
   if(window==top) {
@@ -99,16 +99,16 @@ DETAIL:&nbsp;FIELD&nbsp;|&nbsp;<A HREF="#constructor_detail">CONSTR</A>&nbsp;|&n
 <!-- ======== START OF CLASS DATA ======== -->
 <H2>
 <FONT SIZE="-1">
-org.beryl.intents</FONT>
+org.beryl.util</FONT>
 <BR>
-Class Helpers</H2>
+Class StringUtils</H2>
 <PRE>
 <A HREF="http://developer.android.com/reference/java/lang/Object.html?is-external=true" title="class or interface in java.lang">java.lang.Object</A>
-  <IMG SRC="../../../resources/inherit.gif" ALT="extended by "><B>org.beryl.intents.Helpers</B>
+  <IMG SRC="../../../resources/inherit.gif" ALT="extended by "><B>org.beryl.util.StringUtils</B>
 </PRE>
 <HR>
 <DL>
-<DT><PRE>public class <B>Helpers</B><DT>extends <A HREF="http://developer.android.com/reference/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</A></DL>
+<DT><PRE>public class <B>StringUtils</B><DT>extends <A HREF="http://developer.android.com/reference/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</A></DL>
 </PRE>
 
 <P>
@@ -125,7 +125,7 @@ Class Helpers</H2>
 <B>Constructor Summary</B></FONT></TH>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
-<TD><CODE><B><A HREF="../../../org/beryl/intents/Helpers.html#Helpers()">Helpers</A></B>()</CODE>
+<TD><CODE><B><A HREF="../../../org/beryl/util/StringUtils.html#StringUtils()">StringUtils</A></B>()</CODE>
 
 <BR>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
@@ -142,12 +142,11 @@ Class Helpers</H2>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
-<CODE>static&nbsp;boolean</CODE></FONT></TD>
-<TD><CODE><B><A HREF="../../../org/beryl/intents/Helpers.html#canHandleIntent(android.content.Context, android.content.Intent)">canHandleIntent</A></B>(<A HREF="http://developer.android.com/reference/android/content/Context.html?is-external=true" title="class or interface in android.content">Context</A>&nbsp;context,
-                <A HREF="http://developer.android.com/reference/android/content/Intent.html?is-external=true" title="class or interface in android.content">Intent</A>&nbsp;intent)</CODE>
+<CODE>static&nbsp;<A HREF="http://developer.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../org/beryl/util/StringUtils.html#objectToStringNoNull(java.lang.Object)">objectToStringNoNull</A></B>(<A HREF="http://developer.android.com/reference/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</A>&nbsp;obj)</CODE>
 
 <BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Converts an object to a string via it's toString() method.</TD>
 </TR>
 </TABLE>
 &nbsp;<A NAME="methods_inherited_from_class_java.lang.Object"><!-- --></A>
@@ -172,10 +171,10 @@ Class Helpers</H2>
 </TR>
 </TABLE>
 
-<A NAME="Helpers()"><!-- --></A><H3>
-Helpers</H3>
+<A NAME="StringUtils()"><!-- --></A><H3>
+StringUtils</H3>
 <PRE>
-public <B>Helpers</B>()</PRE>
+public <B>StringUtils</B>()</PRE>
 <DL>
 </DL>
 
@@ -189,12 +188,13 @@ public <B>Helpers</B>()</PRE>
 </TR>
 </TABLE>
 
-<A NAME="canHandleIntent(android.content.Context, android.content.Intent)"><!-- --></A><H3>
-canHandleIntent</H3>
+<A NAME="objectToStringNoNull(java.lang.Object)"><!-- --></A><H3>
+objectToStringNoNull</H3>
 <PRE>
-public static boolean <B>canHandleIntent</B>(<A HREF="http://developer.android.com/reference/android/content/Context.html?is-external=true" title="class or interface in android.content">Context</A>&nbsp;context,
-                                      <A HREF="http://developer.android.com/reference/android/content/Intent.html?is-external=true" title="class or interface in android.content">Intent</A>&nbsp;intent)</PRE>
+public static <A HREF="http://developer.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A> <B>objectToStringNoNull</B>(<A HREF="http://developer.android.com/reference/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</A>&nbsp;obj)</PRE>
 <DL>
+<DD>Converts an object to a string via it's toString() method. If the object itself is null then "[NULL]" is returned.
+<P>
 <DD><DL>
 </DL>
 </DD>
@@ -215,7 +215,7 @@ public static boolean <B>canHandleIntent</B>(<A HREF="http://developer.android.c
   <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
   <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
   <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
-  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="class-use/Helpers.html"><FONT CLASS="NavBarFont1"><B>Use</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="class-use/StringUtils.html"><FONT CLASS="NavBarFont1"><B>Use</B></FONT></A>&nbsp;</TD>
   <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
   <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
   <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
@@ -243,11 +243,11 @@ $.beautyOfCode.init({
 
 <TR>
 <TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
-&nbsp;PREV CLASS&nbsp;
-&nbsp;NEXT CLASS</FONT></TD>
+&nbsp;<A HREF="../../../org/beryl/util/Reflection.html" title="class in org.beryl.util"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;<A HREF="../../../org/beryl/util/TryParse.html" title="class in org.beryl.util"><B>NEXT CLASS</B></A></FONT></TD>
 <TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
-  <A HREF="../../../index.html?org/beryl/intents/Helpers.html" target="_top"><B>FRAMES</B></A>  &nbsp;
-&nbsp;<A HREF="Helpers.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+  <A HREF="../../../index.html?org/beryl/util/StringUtils.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="StringUtils.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
 &nbsp;<SCRIPT type="text/javascript">
   <!--
   if(window==top) {
