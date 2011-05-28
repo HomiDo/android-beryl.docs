@@ -3,9 +3,11 @@ org.beryl.app
 org.beryl.content.webfeeds
 org.beryl.content.webfeeds.rss
 org.beryl.database
+org.beryl.deployment
 org.beryl.diagnostics
 org.beryl.intents
 org.beryl.intents.android
+org.beryl.io
 org.beryl.location
 org.beryl.util
 org.beryl.web.cache
