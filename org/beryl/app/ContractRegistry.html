@@ -108,23 +108,33 @@ Class ContractRegistry</H2>
 </PRE>
 <HR>
 <DL>
-<DT><PRE>public class <B>ContractRegistry</B><DT>extends <A HREF="http://developer.android.com/reference/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</A></DL>
+<DT><PRE>public final class <B>ContractRegistry</B><DT>extends <A HREF="http://developer.android.com/reference/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</A></DL>
 </PRE>
 
 <P>
-Registry of objects categorized by their interfaces that extend <A HREF="../../../org/beryl/app/RegisterableContract.html" title="interface in org.beryl.app"><CODE>RegisterableContract</CODE></A>.
- Objects stored in the registry can be retrieved by users to be called against.
+Registry of interfaces that can be queried by other objects. The primary goal is to provide a way to decouple <A HREF="http://developer.android.com/reference/android/app/Fragment.html?is-external=true" title="class or interface in android.app"><CODE>Fragment</CODE></A>s while allowing them to communicate with each other through these exposed interfaces.
+ This class is not specific to Activities and Fragments but can be used in any situation where multiple components need to communicate.
  
- 
- This class is mainly used for decoupling <A HREF="http://developer.android.com/reference/android/app/Fragment.html?is-external=true" title="class or interface in android.app"><CODE>Fragment</CODE></A>s from their parent activities as well as enabling communication between Fragments.
- 
- 
- The example below shows how a fragment can talk to another fragment without any communication to the Activity.
- 
+<h2>Pattern Setup</h2>
+<ol>
+        <li>Create a class that implements the <A HREF="../../../org/beryl/app/IContractMediator.html" title="interface in org.beryl.app"><CODE>IContractMediator</CODE></A> interface. This class will hold the ContractRegistry object.</li>
+        <li>Determine and create the contracts (interface) that the classes would want exposed. These interfaces must extend <A HREF="../../../org/beryl/app/RegisterableContract.html" title="interface in org.beryl.app"><CODE>RegisterableContract</CODE></A>.</li>
+        <li>For each component, create non-static inner classes for the each interface they will expose. This is preferred over having the component itself implement the interface but that is supported as well.</li>
+        <li>When wiring up the objects together get the handle of the ContractsRegistry from the class that implements <A HREF="../../../org/beryl/app/IContractMediator.html" title="interface in org.beryl.app"><CODE>IContractMediator</CODE></A>. Add the object to the registry via the .add(Object) method.</li>
+        <li>Likewise when removing the object call .remove(object) against the registry otherwise a GC memory-leak will occur.</li>
+</ol>
+
+<h2>Example</h2>
 <pre class="code"><code class="java">
 
 public class MainActivity extends FragmentActivity implements IContractMediator {
-        final private ContractRegistry contracts = new ContractRegistry(this);
+        final private ContractRegistry contracts = new ContractRegistry();
+
+        public void onCreate(Bundle savedInstanceState) {
+                super.onCreate(savedInstanceState);
+                contracts.add(this);
+        }
+
         public ContractRegistry getContractRegistry() {
                 return contracts;
         }
@@ -142,12 +152,12 @@ public class WorkerFragment extends Fragment {
         public void onAttach(Activity activity) {
                 super.onAttach(activity);
                 contractSource = ContractRegistry.getContractRegistry(activity);
-                contractSource.attachMembers(this);
+                contractSource.add(this);
         }
 
         public void onDetach() {
                 super.onDetach();
-                contractSource.detachMembers(this);
+                contractSource.remove(this);
                 contractSource = null;
         }
 
@@ -164,12 +174,12 @@ public class RequesterFragment extends Fragment {
         public void onAttach(Activity activity) {
                 super.onAttach(activity);
                 contractSource = ContractRegistry.getContractRegistry(activity);
-                contractSource.attachMembers(this);
+                contractSource.add(this);
         }
 
         public void onDetach() {
                 super.onDetach();
-                contractSource.detachMembers(this);
+                contractSource.remove(this);
                 contractSource = null;
         }
 
@@ -202,12 +212,6 @@ public class RequesterFragment extends Fragment {
 <BR>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
 </TR>
-<TR BGCOLOR="white" CLASS="TableRowColor">
-<TD><CODE><B><A HREF="../../../org/beryl/app/ContractRegistry.html#ContractRegistry(java.lang.Object)">ContractRegistry</A></B>(<A HREF="http://developer.android.com/reference/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</A>&nbsp;parent)</CODE>
-
-<BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Constructs a new contract registry and attaches all ContractRegisterable fields from the class passed in.</TD>
-</TR>
 </TABLE>
 &nbsp;
 <!-- ========== METHOD SUMMARY =========== -->
@@ -221,34 +225,10 @@ public class RequesterFragment extends Fragment {
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
 <CODE>&nbsp;void</CODE></FONT></TD>
-<TD><CODE><B><A HREF="../../../org/beryl/app/ContractRegistry.html#attach(java.lang.Object)">attach</A></B>(<A HREF="http://developer.android.com/reference/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</A>&nbsp;object)</CODE>
+<TD><CODE><B><A HREF="../../../org/beryl/app/ContractRegistry.html#add(java.lang.Object)">add</A></B>(<A HREF="http://developer.android.com/reference/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</A>&nbsp;object)</CODE>
 
 <BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
-</TR>
-<TR BGCOLOR="white" CLASS="TableRowColor">
-<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
-<CODE>&nbsp;void</CODE></FONT></TD>
-<TD><CODE><B><A HREF="../../../org/beryl/app/ContractRegistry.html#attachMembers(java.lang.Object)">attachMembers</A></B>(<A HREF="http://developer.android.com/reference/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</A>&nbsp;obj)</CODE>
-
-<BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
-</TR>
-<TR BGCOLOR="white" CLASS="TableRowColor">
-<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
-<CODE>&nbsp;void</CODE></FONT></TD>
-<TD><CODE><B><A HREF="../../../org/beryl/app/ContractRegistry.html#detach(java.lang.Object)">detach</A></B>(<A HREF="http://developer.android.com/reference/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</A>&nbsp;object)</CODE>
-
-<BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Unregisters an object from the manager.</TD>
-</TR>
-<TR BGCOLOR="white" CLASS="TableRowColor">
-<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
-<CODE>&nbsp;void</CODE></FONT></TD>
-<TD><CODE><B><A HREF="../../../org/beryl/app/ContractRegistry.html#detachMembers(java.lang.Object)">detachMembers</A></B>(<A HREF="http://developer.android.com/reference/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</A>&nbsp;obj)</CODE>
-
-<BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Adds an object and it's members variables to the registry if they implement a RegisterableContact interface.</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
@@ -278,7 +258,7 @@ public class RequesterFragment extends Fragment {
 <TD><CODE><B><A HREF="../../../org/beryl/app/ContractRegistry.html#getAll(java.lang.Class)">getAll</A></B>(<A HREF="http://developer.android.com/reference/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</A>&lt;T&gt;&nbsp;clazz)</CODE>
 
 <BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns all instances of the contract class.</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
@@ -287,6 +267,14 @@ public class RequesterFragment extends Fragment {
 
 <BR>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../org/beryl/app/ContractRegistry.html#remove(java.lang.Object)">remove</A></B>(<A HREF="http://developer.android.com/reference/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</A>&nbsp;object)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Removes the an object and its members from the registry.</TD>
 </TR>
 </TABLE>
 &nbsp;<A NAME="methods_inherited_from_class_java.lang.Object"><!-- --></A>
@@ -317,16 +305,6 @@ ContractRegistry</H3>
 public <B>ContractRegistry</B>()</PRE>
 <DL>
 </DL>
-<HR>
-
-<A NAME="ContractRegistry(java.lang.Object)"><!-- --></A><H3>
-ContractRegistry</H3>
-<PRE>
-public <B>ContractRegistry</B>(<A HREF="http://developer.android.com/reference/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</A>&nbsp;parent)</PRE>
-<DL>
-<DD>Constructs a new contract registry and attaches all ContractRegisterable fields from the class passed in.
-<P>
-</DL>
 
 <!-- ============ METHOD DETAIL ========== -->
 
@@ -338,23 +316,25 @@ public <B>ContractRegistry</B>(<A HREF="http://developer.android.com/reference/j
 </TR>
 </TABLE>
 
-<A NAME="attach(java.lang.Object)"><!-- --></A><H3>
-attach</H3>
+<A NAME="add(java.lang.Object)"><!-- --></A><H3>
+add</H3>
 <PRE>
-public void <B>attach</B>(<A HREF="http://developer.android.com/reference/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</A>&nbsp;object)</PRE>
+public void <B>add</B>(<A HREF="http://developer.android.com/reference/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</A>&nbsp;object)</PRE>
 <DL>
+<DD>Adds an object and it's members variables to the registry if they implement a RegisterableContact interface.
+<P>
 <DD><DL>
 </DL>
 </DD>
 </DL>
 <HR>
 
-<A NAME="detach(java.lang.Object)"><!-- --></A><H3>
-detach</H3>
+<A NAME="remove(java.lang.Object)"><!-- --></A><H3>
+remove</H3>
 <PRE>
-public void <B>detach</B>(<A HREF="http://developer.android.com/reference/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</A>&nbsp;object)</PRE>
+public void <B>remove</B>(<A HREF="http://developer.android.com/reference/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</A>&nbsp;object)</PRE>
 <DL>
-<DD>Unregisters an object from the manager.
+<DD>Removes the an object and its members from the registry.
 <P>
 <DD><DL>
 </DL>
@@ -378,28 +358,8 @@ getAll</H3>
 <PRE>
 public &lt;T&gt; <A HREF="http://developer.android.com/reference/java/util/ArrayList.html?is-external=true" title="class or interface in java.util">ArrayList</A>&lt;T&gt; <B>getAll</B>(<A HREF="http://developer.android.com/reference/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</A>&lt;T&gt;&nbsp;clazz)</PRE>
 <DL>
-<DD><DL>
-</DL>
-</DD>
-</DL>
-<HR>
-
-<A NAME="attachMembers(java.lang.Object)"><!-- --></A><H3>
-attachMembers</H3>
-<PRE>
-public void <B>attachMembers</B>(<A HREF="http://developer.android.com/reference/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</A>&nbsp;obj)</PRE>
-<DL>
-<DD><DL>
-</DL>
-</DD>
-</DL>
-<HR>
-
-<A NAME="detachMembers(java.lang.Object)"><!-- --></A><H3>
-detachMembers</H3>
-<PRE>
-public void <B>detachMembers</B>(<A HREF="http://developer.android.com/reference/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</A>&nbsp;obj)</PRE>
-<DL>
+<DD>Returns all instances of the contract class.
+<P>
 <DD><DL>
 </DL>
 </DD>
