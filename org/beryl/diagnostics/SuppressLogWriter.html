@@ -3,7 +3,7 @@
 <HTML>
 <HEAD>
 <TITLE>
-StrictModeEnabler (Beryl API)
+SuppressLogWriter (Beryl API)
 </TITLE>
 
 
@@ -13,7 +13,7 @@ StrictModeEnabler (Beryl API)
 function windowTitle()
 {
     if (location.href.indexOf('is-external=true') == -1) {
-        parent.document.title="StrictModeEnabler (Beryl API)";
+        parent.document.title="SuppressLogWriter (Beryl API)";
     }
 }
 </SCRIPT>
@@ -38,7 +38,7 @@ function windowTitle()
   <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
   <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
   <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
-  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="class-use/StrictModeEnabler.html"><FONT CLASS="NavBarFont1"><B>Use</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="class-use/SuppressLogWriter.html"><FONT CLASS="NavBarFont1"><B>Use</B></FONT></A>&nbsp;</TD>
   <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
   <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
   <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
@@ -66,11 +66,11 @@ $.beautyOfCode.init({
 
 <TR>
 <TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
-&nbsp;<A HREF="../../../org/beryl/diagnostics/Logger.html" title="class in org.beryl.diagnostics"><B>PREV CLASS</B></A>&nbsp;
-&nbsp;<A HREF="../../../org/beryl/diagnostics/SuppressLogWriter.html" title="class in org.beryl.diagnostics"><B>NEXT CLASS</B></A></FONT></TD>
+&nbsp;<A HREF="../../../org/beryl/diagnostics/StrictModeEnabler.html" title="class in org.beryl.diagnostics"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;NEXT CLASS</FONT></TD>
 <TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
-  <A HREF="../../../index.html?org/beryl/diagnostics/StrictModeEnabler.html" target="_top"><B>FRAMES</B></A>  &nbsp;
-&nbsp;<A HREF="StrictModeEnabler.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+  <A HREF="../../../index.html?org/beryl/diagnostics/SuppressLogWriter.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="SuppressLogWriter.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
 &nbsp;<SCRIPT type="text/javascript">
   <!--
   if(window==top) {
@@ -101,20 +101,21 @@ DETAIL:&nbsp;FIELD&nbsp;|&nbsp;<A HREF="#constructor_detail">CONSTR</A>&nbsp;|&n
 <FONT SIZE="-1">
 org.beryl.diagnostics</FONT>
 <BR>
-Class StrictModeEnabler</H2>
+Class SuppressLogWriter</H2>
 <PRE>
 <A HREF="http://developer.android.com/reference/java/lang/Object.html?is-external=true" title="class or interface in java.lang">java.lang.Object</A>
-  <IMG SRC="../../../resources/inherit.gif" ALT="extended by "><B>org.beryl.diagnostics.StrictModeEnabler</B>
+  <IMG SRC="../../../resources/inherit.gif" ALT="extended by "><B>org.beryl.diagnostics.SuppressLogWriter</B>
 </PRE>
+<DL>
+<DT><B>All Implemented Interfaces:</B> <DD><A HREF="../../../org/beryl/diagnostics/ILoggerWriter.html" title="interface in org.beryl.diagnostics">ILoggerWriter</A></DD>
+</DL>
 <HR>
 <DL>
-<DT><PRE>public class <B>StrictModeEnabler</B><DT>extends <A HREF="http://developer.android.com/reference/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</A></DL>
+<DT><PRE>public class <B>SuppressLogWriter</B><DT>extends <A HREF="http://developer.android.com/reference/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</A><DT>implements <A HREF="../../../org/beryl/diagnostics/ILoggerWriter.html" title="interface in org.beryl.diagnostics">ILoggerWriter</A></DL>
 </PRE>
 
 <P>
-Manages the enabling of Strict Mode which will record to a penalty log.
- Note: Strict Mode is only supported in Gingerbread or higher.
- If methods are called on an unsupported system they will silently be ignored.
+Suppresses all logging.
 <P>
 
 <P>
@@ -131,7 +132,7 @@ Manages the enabling of Strict Mode which will record to a penalty log.
 <B>Constructor Summary</B></FONT></TH>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
-<TD><CODE><B><A HREF="../../../org/beryl/diagnostics/StrictModeEnabler.html#StrictModeEnabler()">StrictModeEnabler</A></B>()</CODE>
+<TD><CODE><B><A HREF="../../../org/beryl/diagnostics/SuppressLogWriter.html#SuppressLogWriter()">SuppressLogWriter</A></B>()</CODE>
 
 <BR>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
@@ -148,11 +149,48 @@ Manages the enabling of Strict Mode which will record to a penalty log.
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
-<CODE>static&nbsp;void</CODE></FONT></TD>
-<TD><CODE><B><A HREF="../../../org/beryl/diagnostics/StrictModeEnabler.html#enableOnThread()">enableOnThread</A></B>()</CODE>
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../org/beryl/diagnostics/SuppressLogWriter.html#d(java.lang.String, java.lang.String)">d</A></B>(<A HREF="http://developer.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;tag,
+  <A HREF="http://developer.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;msg)</CODE>
 
 <BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Enables strict mode on the current thread.</TD>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Log a debug message.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../org/beryl/diagnostics/SuppressLogWriter.html#e(java.lang.String, java.lang.Exception)">e</A></B>(<A HREF="http://developer.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;tag,
+  <A HREF="http://developer.android.com/reference/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</A>&nbsp;e)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Log an exception, with the stack trace, exception type and message.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../org/beryl/diagnostics/SuppressLogWriter.html#e(java.lang.String, java.lang.String)">e</A></B>(<A HREF="http://developer.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;tag,
+  <A HREF="http://developer.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;msg)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Log an error message.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../org/beryl/diagnostics/SuppressLogWriter.html#i(java.lang.String, java.lang.String)">i</A></B>(<A HREF="http://developer.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;tag,
+  <A HREF="http://developer.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;msg)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Log an informative message.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../org/beryl/diagnostics/SuppressLogWriter.html#w(java.lang.String, java.lang.String)">w</A></B>(<A HREF="http://developer.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;tag,
+  <A HREF="http://developer.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;msg)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Log a warning message.</TD>
 </TR>
 </TABLE>
 &nbsp;<A NAME="methods_inherited_from_class_java.lang.Object"><!-- --></A>
@@ -177,10 +215,10 @@ Manages the enabling of Strict Mode which will record to a penalty log.
 </TR>
 </TABLE>
 
-<A NAME="StrictModeEnabler()"><!-- --></A><H3>
-StrictModeEnabler</H3>
+<A NAME="SuppressLogWriter()"><!-- --></A><H3>
+SuppressLogWriter</H3>
 <PRE>
-public <B>StrictModeEnabler</B>()</PRE>
+public <B>SuppressLogWriter</B>()</PRE>
 <DL>
 </DL>
 
@@ -194,13 +232,90 @@ public <B>StrictModeEnabler</B>()</PRE>
 </TR>
 </TABLE>
 
-<A NAME="enableOnThread()"><!-- --></A><H3>
-enableOnThread</H3>
+<A NAME="d(java.lang.String, java.lang.String)"><!-- --></A><H3>
+d</H3>
 <PRE>
-public static void <B>enableOnThread</B>()</PRE>
+public void <B>d</B>(<A HREF="http://developer.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;tag,
+              <A HREF="http://developer.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;msg)</PRE>
 <DL>
-<DD>Enables strict mode on the current thread. Note: Strict Mode is only supported in Gingerbread or higher.
+<DD><B>Description copied from interface: <CODE><A HREF="../../../org/beryl/diagnostics/ILoggerWriter.html#d(java.lang.String, java.lang.String)">ILoggerWriter</A></CODE></B></DD>
+<DD>Log a debug message.
 <P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../org/beryl/diagnostics/ILoggerWriter.html#d(java.lang.String, java.lang.String)">d</A></CODE> in interface <CODE><A HREF="../../../org/beryl/diagnostics/ILoggerWriter.html" title="interface in org.beryl.diagnostics">ILoggerWriter</A></CODE></DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="e(java.lang.String, java.lang.Exception)"><!-- --></A><H3>
+e</H3>
+<PRE>
+public void <B>e</B>(<A HREF="http://developer.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;tag,
+              <A HREF="http://developer.android.com/reference/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</A>&nbsp;e)</PRE>
+<DL>
+<DD><B>Description copied from interface: <CODE><A HREF="../../../org/beryl/diagnostics/ILoggerWriter.html#e(java.lang.String, java.lang.Exception)">ILoggerWriter</A></CODE></B></DD>
+<DD>Log an exception, with the stack trace, exception type and message.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../org/beryl/diagnostics/ILoggerWriter.html#e(java.lang.String, java.lang.Exception)">e</A></CODE> in interface <CODE><A HREF="../../../org/beryl/diagnostics/ILoggerWriter.html" title="interface in org.beryl.diagnostics">ILoggerWriter</A></CODE></DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="e(java.lang.String, java.lang.String)"><!-- --></A><H3>
+e</H3>
+<PRE>
+public void <B>e</B>(<A HREF="http://developer.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;tag,
+              <A HREF="http://developer.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;msg)</PRE>
+<DL>
+<DD><B>Description copied from interface: <CODE><A HREF="../../../org/beryl/diagnostics/ILoggerWriter.html#e(java.lang.String, java.lang.String)">ILoggerWriter</A></CODE></B></DD>
+<DD>Log an error message.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../org/beryl/diagnostics/ILoggerWriter.html#e(java.lang.String, java.lang.String)">e</A></CODE> in interface <CODE><A HREF="../../../org/beryl/diagnostics/ILoggerWriter.html" title="interface in org.beryl.diagnostics">ILoggerWriter</A></CODE></DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="i(java.lang.String, java.lang.String)"><!-- --></A><H3>
+i</H3>
+<PRE>
+public void <B>i</B>(<A HREF="http://developer.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;tag,
+              <A HREF="http://developer.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;msg)</PRE>
+<DL>
+<DD><B>Description copied from interface: <CODE><A HREF="../../../org/beryl/diagnostics/ILoggerWriter.html#i(java.lang.String, java.lang.String)">ILoggerWriter</A></CODE></B></DD>
+<DD>Log an informative message.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../org/beryl/diagnostics/ILoggerWriter.html#i(java.lang.String, java.lang.String)">i</A></CODE> in interface <CODE><A HREF="../../../org/beryl/diagnostics/ILoggerWriter.html" title="interface in org.beryl.diagnostics">ILoggerWriter</A></CODE></DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="w(java.lang.String, java.lang.String)"><!-- --></A><H3>
+w</H3>
+<PRE>
+public void <B>w</B>(<A HREF="http://developer.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;tag,
+              <A HREF="http://developer.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;msg)</PRE>
+<DL>
+<DD><B>Description copied from interface: <CODE><A HREF="../../../org/beryl/diagnostics/ILoggerWriter.html#w(java.lang.String, java.lang.String)">ILoggerWriter</A></CODE></B></DD>
+<DD>Log a warning message.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../org/beryl/diagnostics/ILoggerWriter.html#w(java.lang.String, java.lang.String)">w</A></CODE> in interface <CODE><A HREF="../../../org/beryl/diagnostics/ILoggerWriter.html" title="interface in org.beryl.diagnostics">ILoggerWriter</A></CODE></DL>
+</DD>
 <DD><DL>
 </DL>
 </DD>
@@ -221,7 +336,7 @@ public static void <B>enableOnThread</B>()</PRE>
   <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
   <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
   <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
-  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="class-use/StrictModeEnabler.html"><FONT CLASS="NavBarFont1"><B>Use</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="class-use/SuppressLogWriter.html"><FONT CLASS="NavBarFont1"><B>Use</B></FONT></A>&nbsp;</TD>
   <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
   <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
   <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
@@ -249,11 +364,11 @@ $.beautyOfCode.init({
 
 <TR>
 <TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
-&nbsp;<A HREF="../../../org/beryl/diagnostics/Logger.html" title="class in org.beryl.diagnostics"><B>PREV CLASS</B></A>&nbsp;
-&nbsp;<A HREF="../../../org/beryl/diagnostics/SuppressLogWriter.html" title="class in org.beryl.diagnostics"><B>NEXT CLASS</B></A></FONT></TD>
+&nbsp;<A HREF="../../../org/beryl/diagnostics/StrictModeEnabler.html" title="class in org.beryl.diagnostics"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;NEXT CLASS</FONT></TD>
 <TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
-  <A HREF="../../../index.html?org/beryl/diagnostics/StrictModeEnabler.html" target="_top"><B>FRAMES</B></A>  &nbsp;
-&nbsp;<A HREF="StrictModeEnabler.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+  <A HREF="../../../index.html?org/beryl/diagnostics/SuppressLogWriter.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="SuppressLogWriter.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
 &nbsp;<SCRIPT type="text/javascript">
   <!--
   if(window==top) {
