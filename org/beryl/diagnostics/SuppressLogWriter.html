@@ -107,11 +107,11 @@ Class SuppressLogWriter</H2>
   <IMG SRC="../../../resources/inherit.gif" ALT="extended by "><B>org.beryl.diagnostics.SuppressLogWriter</B>
 </PRE>
 <DL>
-<DT><B>All Implemented Interfaces:</B> <DD><A HREF="../../../org/beryl/diagnostics/ILoggerWriter.html" title="interface in org.beryl.diagnostics">ILoggerWriter</A></DD>
+<DT><B>All Implemented Interfaces:</B> <DD><A HREF="../../../org/beryl/diagnostics/ILogWriter.html" title="interface in org.beryl.diagnostics">ILogWriter</A></DD>
 </DL>
 <HR>
 <DL>
-<DT><PRE>public class <B>SuppressLogWriter</B><DT>extends <A HREF="http://developer.android.com/reference/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</A><DT>implements <A HREF="../../../org/beryl/diagnostics/ILoggerWriter.html" title="interface in org.beryl.diagnostics">ILoggerWriter</A></DL>
+<DT><PRE>public class <B>SuppressLogWriter</B><DT>extends <A HREF="http://developer.android.com/reference/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</A><DT>implements <A HREF="../../../org/beryl/diagnostics/ILogWriter.html" title="interface in org.beryl.diagnostics">ILogWriter</A></DL>
 </PRE>
 
 <P>
@@ -177,6 +177,15 @@ Suppresses all logging.
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
 <CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../org/beryl/diagnostics/SuppressLogWriter.html#e(java.lang.String, java.lang.Throwable)">e</A></B>(<A HREF="http://developer.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;tag,
+  <A HREF="http://developer.android.com/reference/java/lang/Throwable.html?is-external=true" title="class or interface in java.lang">Throwable</A>&nbsp;tr)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Log a throwable, with the stack trace, exception type and message.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
 <TD><CODE><B><A HREF="../../../org/beryl/diagnostics/SuppressLogWriter.html#i(java.lang.String, java.lang.String)">i</A></B>(<A HREF="http://developer.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;tag,
   <A HREF="http://developer.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;msg)</CODE>
 
@@ -238,11 +247,11 @@ d</H3>
 public void <B>d</B>(<A HREF="http://developer.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;tag,
               <A HREF="http://developer.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;msg)</PRE>
 <DL>
-<DD><B>Description copied from interface: <CODE><A HREF="../../../org/beryl/diagnostics/ILoggerWriter.html#d(java.lang.String, java.lang.String)">ILoggerWriter</A></CODE></B></DD>
+<DD><B>Description copied from interface: <CODE><A HREF="../../../org/beryl/diagnostics/ILogWriter.html#d(java.lang.String, java.lang.String)">ILogWriter</A></CODE></B></DD>
 <DD>Log a debug message.
 <P>
 <DD><DL>
-<DT><B>Specified by:</B><DD><CODE><A HREF="../../../org/beryl/diagnostics/ILoggerWriter.html#d(java.lang.String, java.lang.String)">d</A></CODE> in interface <CODE><A HREF="../../../org/beryl/diagnostics/ILoggerWriter.html" title="interface in org.beryl.diagnostics">ILoggerWriter</A></CODE></DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../org/beryl/diagnostics/ILogWriter.html#d(java.lang.String, java.lang.String)">d</A></CODE> in interface <CODE><A HREF="../../../org/beryl/diagnostics/ILogWriter.html" title="interface in org.beryl.diagnostics">ILogWriter</A></CODE></DL>
 </DD>
 <DD><DL>
 </DL>
@@ -256,11 +265,11 @@ e</H3>
 public void <B>e</B>(<A HREF="http://developer.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;tag,
               <A HREF="http://developer.android.com/reference/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</A>&nbsp;e)</PRE>
 <DL>
-<DD><B>Description copied from interface: <CODE><A HREF="../../../org/beryl/diagnostics/ILoggerWriter.html#e(java.lang.String, java.lang.Exception)">ILoggerWriter</A></CODE></B></DD>
+<DD><B>Description copied from interface: <CODE><A HREF="../../../org/beryl/diagnostics/ILogWriter.html#e(java.lang.String, java.lang.Exception)">ILogWriter</A></CODE></B></DD>
 <DD>Log an exception, with the stack trace, exception type and message.
 <P>
 <DD><DL>
-<DT><B>Specified by:</B><DD><CODE><A HREF="../../../org/beryl/diagnostics/ILoggerWriter.html#e(java.lang.String, java.lang.Exception)">e</A></CODE> in interface <CODE><A HREF="../../../org/beryl/diagnostics/ILoggerWriter.html" title="interface in org.beryl.diagnostics">ILoggerWriter</A></CODE></DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../org/beryl/diagnostics/ILogWriter.html#e(java.lang.String, java.lang.Exception)">e</A></CODE> in interface <CODE><A HREF="../../../org/beryl/diagnostics/ILogWriter.html" title="interface in org.beryl.diagnostics">ILogWriter</A></CODE></DL>
 </DD>
 <DD><DL>
 </DL>
@@ -274,11 +283,11 @@ e</H3>
 public void <B>e</B>(<A HREF="http://developer.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;tag,
               <A HREF="http://developer.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;msg)</PRE>
 <DL>
-<DD><B>Description copied from interface: <CODE><A HREF="../../../org/beryl/diagnostics/ILoggerWriter.html#e(java.lang.String, java.lang.String)">ILoggerWriter</A></CODE></B></DD>
+<DD><B>Description copied from interface: <CODE><A HREF="../../../org/beryl/diagnostics/ILogWriter.html#e(java.lang.String, java.lang.String)">ILogWriter</A></CODE></B></DD>
 <DD>Log an error message.
 <P>
 <DD><DL>
-<DT><B>Specified by:</B><DD><CODE><A HREF="../../../org/beryl/diagnostics/ILoggerWriter.html#e(java.lang.String, java.lang.String)">e</A></CODE> in interface <CODE><A HREF="../../../org/beryl/diagnostics/ILoggerWriter.html" title="interface in org.beryl.diagnostics">ILoggerWriter</A></CODE></DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../org/beryl/diagnostics/ILogWriter.html#e(java.lang.String, java.lang.String)">e</A></CODE> in interface <CODE><A HREF="../../../org/beryl/diagnostics/ILogWriter.html" title="interface in org.beryl.diagnostics">ILogWriter</A></CODE></DL>
 </DD>
 <DD><DL>
 </DL>
@@ -292,11 +301,11 @@ i</H3>
 public void <B>i</B>(<A HREF="http://developer.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;tag,
               <A HREF="http://developer.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;msg)</PRE>
 <DL>
-<DD><B>Description copied from interface: <CODE><A HREF="../../../org/beryl/diagnostics/ILoggerWriter.html#i(java.lang.String, java.lang.String)">ILoggerWriter</A></CODE></B></DD>
+<DD><B>Description copied from interface: <CODE><A HREF="../../../org/beryl/diagnostics/ILogWriter.html#i(java.lang.String, java.lang.String)">ILogWriter</A></CODE></B></DD>
 <DD>Log an informative message.
 <P>
 <DD><DL>
-<DT><B>Specified by:</B><DD><CODE><A HREF="../../../org/beryl/diagnostics/ILoggerWriter.html#i(java.lang.String, java.lang.String)">i</A></CODE> in interface <CODE><A HREF="../../../org/beryl/diagnostics/ILoggerWriter.html" title="interface in org.beryl.diagnostics">ILoggerWriter</A></CODE></DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../org/beryl/diagnostics/ILogWriter.html#i(java.lang.String, java.lang.String)">i</A></CODE> in interface <CODE><A HREF="../../../org/beryl/diagnostics/ILogWriter.html" title="interface in org.beryl.diagnostics">ILogWriter</A></CODE></DL>
 </DD>
 <DD><DL>
 </DL>
@@ -310,11 +319,29 @@ w</H3>
 public void <B>w</B>(<A HREF="http://developer.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;tag,
               <A HREF="http://developer.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;msg)</PRE>
 <DL>
-<DD><B>Description copied from interface: <CODE><A HREF="../../../org/beryl/diagnostics/ILoggerWriter.html#w(java.lang.String, java.lang.String)">ILoggerWriter</A></CODE></B></DD>
+<DD><B>Description copied from interface: <CODE><A HREF="../../../org/beryl/diagnostics/ILogWriter.html#w(java.lang.String, java.lang.String)">ILogWriter</A></CODE></B></DD>
 <DD>Log a warning message.
 <P>
 <DD><DL>
-<DT><B>Specified by:</B><DD><CODE><A HREF="../../../org/beryl/diagnostics/ILoggerWriter.html#w(java.lang.String, java.lang.String)">w</A></CODE> in interface <CODE><A HREF="../../../org/beryl/diagnostics/ILoggerWriter.html" title="interface in org.beryl.diagnostics">ILoggerWriter</A></CODE></DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../org/beryl/diagnostics/ILogWriter.html#w(java.lang.String, java.lang.String)">w</A></CODE> in interface <CODE><A HREF="../../../org/beryl/diagnostics/ILogWriter.html" title="interface in org.beryl.diagnostics">ILogWriter</A></CODE></DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="e(java.lang.String, java.lang.Throwable)"><!-- --></A><H3>
+e</H3>
+<PRE>
+public void <B>e</B>(<A HREF="http://developer.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;tag,
+              <A HREF="http://developer.android.com/reference/java/lang/Throwable.html?is-external=true" title="class or interface in java.lang">Throwable</A>&nbsp;tr)</PRE>
+<DL>
+<DD><B>Description copied from interface: <CODE><A HREF="../../../org/beryl/diagnostics/ILogWriter.html#e(java.lang.String, java.lang.Throwable)">ILogWriter</A></CODE></B></DD>
+<DD>Log a throwable, with the stack trace, exception type and message.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../org/beryl/diagnostics/ILogWriter.html#e(java.lang.String, java.lang.Throwable)">e</A></CODE> in interface <CODE><A HREF="../../../org/beryl/diagnostics/ILogWriter.html" title="interface in org.beryl.diagnostics">ILogWriter</A></CODE></DL>
 </DD>
 <DD><DL>
 </DL>

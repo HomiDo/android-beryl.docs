@@ -113,7 +113,7 @@ Class AndroidVersion</H2>
 
 <P>
 Convenience class for retrieving the current Android version that's running on the device.
- 
+
  Code example on how to use AndroidVersion to load a multi-versioned class at runtime for backwards compatibility without using reflection.
  <pre class="code"><code class="java">
 import org.beryl.app.AndroidVersion;
@@ -198,10 +198,34 @@ public class StrictModeEnabler {
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
 <CODE>static&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../org/beryl/app/AndroidVersion.html#isBeforeGingerbreadMr1()">isBeforeGingerbreadMr1</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns true if running on an earlier version than Android 2.3.3.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;boolean</CODE></FONT></TD>
 <TD><CODE><B><A HREF="../../../org/beryl/app/AndroidVersion.html#isBeforeHoneycomb()">isBeforeHoneycomb</A></B>()</CODE>
 
 <BR>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns true if running on an earlier version than Android 3.0.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../org/beryl/app/AndroidVersion.html#isBeforeHoneycombMr1()">isBeforeHoneycombMr1</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns true if running on an earlier version than Android 3.1.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../org/beryl/app/AndroidVersion.html#isBeforeHoneycombMr2()">isBeforeHoneycombMr2</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns true if running on an earlier version than Android 3.2.</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
@@ -238,10 +262,34 @@ public class StrictModeEnabler {
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
 <CODE>static&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../org/beryl/app/AndroidVersion.html#isGingerbreadMr1OrHigher()">isGingerbreadMr1OrHigher</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns true if running on Android 2.3.3 or higher.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;boolean</CODE></FONT></TD>
 <TD><CODE><B><A HREF="../../../org/beryl/app/AndroidVersion.html#isGingerbreadOrHigher()">isGingerbreadOrHigher</A></B>()</CODE>
 
 <BR>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns true if running on Android 2.3 or higher.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../org/beryl/app/AndroidVersion.html#isHoneycombMr1OrHigher()">isHoneycombMr1OrHigher</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns true if running on Android 3.1 or higher.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../org/beryl/app/AndroidVersion.html#isHoneycombMr2OrHigher()">isHoneycombMr2OrHigher</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns true if running on Android 3.2 or higher.</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
@@ -352,6 +400,19 @@ public static boolean <B>isGingerbreadOrHigher</B>()</PRE>
 </DL>
 <HR>
 
+<A NAME="isGingerbreadMr1OrHigher()"><!-- --></A><H3>
+isGingerbreadMr1OrHigher</H3>
+<PRE>
+public static boolean <B>isGingerbreadMr1OrHigher</B>()</PRE>
+<DL>
+<DD>Returns true if running on Android 2.3.3 or higher.
+<P>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
 <A NAME="isHoneycombOrHigher()"><!-- --></A><H3>
 isHoneycombOrHigher</H3>
 <PRE>
@@ -365,12 +426,77 @@ public static boolean <B>isHoneycombOrHigher</B>()</PRE>
 </DL>
 <HR>
 
+<A NAME="isHoneycombMr1OrHigher()"><!-- --></A><H3>
+isHoneycombMr1OrHigher</H3>
+<PRE>
+public static boolean <B>isHoneycombMr1OrHigher</B>()</PRE>
+<DL>
+<DD>Returns true if running on Android 3.1 or higher.
+<P>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="isHoneycombMr2OrHigher()"><!-- --></A><H3>
+isHoneycombMr2OrHigher</H3>
+<PRE>
+public static boolean <B>isHoneycombMr2OrHigher</B>()</PRE>
+<DL>
+<DD>Returns true if running on Android 3.2 or higher.
+<P>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="isBeforeHoneycombMr2()"><!-- --></A><H3>
+isBeforeHoneycombMr2</H3>
+<PRE>
+public static boolean <B>isBeforeHoneycombMr2</B>()</PRE>
+<DL>
+<DD>Returns true if running on an earlier version than Android 3.2.
+<P>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="isBeforeHoneycombMr1()"><!-- --></A><H3>
+isBeforeHoneycombMr1</H3>
+<PRE>
+public static boolean <B>isBeforeHoneycombMr1</B>()</PRE>
+<DL>
+<DD>Returns true if running on an earlier version than Android 3.1.
+<P>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
 <A NAME="isBeforeHoneycomb()"><!-- --></A><H3>
 isBeforeHoneycomb</H3>
 <PRE>
 public static boolean <B>isBeforeHoneycomb</B>()</PRE>
 <DL>
 <DD>Returns true if running on an earlier version than Android 3.0.
+<P>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="isBeforeGingerbreadMr1()"><!-- --></A><H3>
+isBeforeGingerbreadMr1</H3>
+<PRE>
+public static boolean <B>isBeforeGingerbreadMr1</B>()</PRE>
+<DL>
+<DD>Returns true if running on an earlier version than Android 2.3.3.
 <P>
 <DD><DL>
 </DL>

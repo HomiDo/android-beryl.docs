@@ -66,8 +66,8 @@ $.beautyOfCode.init({
 
 <TR>
 <TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
-&nbsp;<A HREF="../../../../org/beryl/intents/android/Camera.html" title="class in org.beryl.intents.android"><B>PREV CLASS</B></A>&nbsp;
-&nbsp;<A HREF="../../../../org/beryl/intents/android/Market.html" title="class in org.beryl.intents.android"><B>NEXT CLASS</B></A></FONT></TD>
+&nbsp;<A HREF="../../../../org/beryl/intents/android/Email.Send.html" title="class in org.beryl.intents.android"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;<A HREF="../../../../org/beryl/intents/android/Gallery.GetImage.html" title="class in org.beryl.intents.android"><B>NEXT CLASS</B></A></FONT></TD>
 <TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
   <A HREF="../../../../index.html?org/beryl/intents/android/Gallery.html" target="_top"><B>FRAMES</B></A>  &nbsp;
 &nbsp;<A HREF="Gallery.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
@@ -87,7 +87,7 @@ $.beautyOfCode.init({
 </TR>
 <TR>
 <TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
-  SUMMARY:&nbsp;NESTED&nbsp;|&nbsp;FIELD&nbsp;|&nbsp;<A HREF="#constructor_summary">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+  SUMMARY:&nbsp;<A HREF="#nested_class_summary">NESTED</A>&nbsp;|&nbsp;FIELD&nbsp;|&nbsp;<A HREF="#constructor_summary">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
 <TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
 DETAIL:&nbsp;FIELD&nbsp;|&nbsp;<A HREF="#constructor_detail">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
 </TR>
@@ -115,7 +115,40 @@ Class Gallery</H2>
 <HR>
 
 <P>
+<!-- ======== NESTED CLASS SUMMARY ======== -->
 
+<A NAME="nested_class_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Nested Class Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;class</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../org/beryl/intents/android/Gallery.GetImage.html" title="class in org.beryl.intents.android">Gallery.GetImage</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;class</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../org/beryl/intents/android/Gallery.GetImageResult.html" title="class in org.beryl.intents.android">Gallery.GetImageResult</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;class</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../org/beryl/intents/android/Gallery.SendImageResult.html" title="class in org.beryl.intents.android">Gallery.SendImageResult</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+</TABLE>
+&nbsp;
 <!-- ======== CONSTRUCTOR SUMMARY ======== -->
 
 <A NAME="constructor_summary"><!-- --></A>
@@ -142,9 +175,18 @@ Class Gallery</H2>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
-<CODE>static&nbsp;<A HREF="http://developer.android.com/reference/android/graphics/Bitmap.html?is-external=true" title="class or interface in android.graphics">Bitmap</A></CODE></FONT></TD>
-<TD><CODE><B><A HREF="../../../../org/beryl/intents/android/Gallery.html#fromSEND_getImage(android.content.Context, android.content.Intent)">fromSEND_getImage</A></B>(<A HREF="http://developer.android.com/reference/android/content/Context.html?is-external=true" title="class or interface in android.content">Context</A>&nbsp;context,
-                  <A HREF="http://developer.android.com/reference/android/content/Intent.html?is-external=true" title="class or interface in android.content">Intent</A>&nbsp;data)</CODE>
+<CODE>static&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../org/beryl/intents/android/Gallery.html#deleteImageUri(android.content.Context, android.net.Uri)">deleteImageUri</A></B>(<A HREF="http://developer.android.com/reference/android/content/Context.html?is-external=true" title="class or interface in android.content">Context</A>&nbsp;context,
+               <A HREF="http://developer.android.com/reference/android/net/Uri.html?is-external=true" title="class or interface in android.net">Uri</A>&nbsp;imageUri)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;<A HREF="http://developer.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../org/beryl/intents/android/Gallery.html#findPictureFilePath(android.content.Context, android.net.Uri)">findPictureFilePath</A></B>(<A HREF="http://developer.android.com/reference/android/content/Context.html?is-external=true" title="class or interface in android.content">Context</A>&nbsp;context,
+                    <A HREF="http://developer.android.com/reference/android/net/Uri.html?is-external=true" title="class or interface in android.net">Uri</A>&nbsp;dataUri)</CODE>
 
 <BR>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
@@ -184,8 +226,33 @@ Class Gallery</H2>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
 <CODE>static&nbsp;<A HREF="http://developer.android.com/reference/android/graphics/Bitmap.html?is-external=true" title="class or interface in android.graphics">Bitmap</A></CODE></FONT></TD>
-<TD><CODE><B><A HREF="../../../../org/beryl/intents/android/Gallery.html#onActivityResult_getImage(android.content.Context, android.content.Intent)">onActivityResult_getImage</A></B>(<A HREF="http://developer.android.com/reference/android/content/Context.html?is-external=true" title="class or interface in android.content">Context</A>&nbsp;context,
-                          <A HREF="http://developer.android.com/reference/android/content/Intent.html?is-external=true" title="class or interface in android.content">Intent</A>&nbsp;data)</CODE>
+<TD><CODE><B><A HREF="../../../../org/beryl/intents/android/Gallery.html#loadBitmapFromUri(android.content.Context, android.net.Uri)">loadBitmapFromUri</A></B>(<A HREF="http://developer.android.com/reference/android/content/Context.html?is-external=true" title="class or interface in android.content">Context</A>&nbsp;context,
+                  <A HREF="http://developer.android.com/reference/android/net/Uri.html?is-external=true" title="class or interface in android.net">Uri</A>&nbsp;fileUri)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;<A HREF="http://developer.android.com/reference/android/content/Intent.html?is-external=true" title="class or interface in android.content">Intent</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../org/beryl/intents/android/Gallery.html#sendImage(java.lang.String)">sendImage</A></B>(<A HREF="http://developer.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;filePath)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;<A HREF="http://developer.android.com/reference/android/content/Intent.html?is-external=true" title="class or interface in android.content">Intent</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../org/beryl/intents/android/Gallery.html#sendImage(android.net.Uri)">sendImage</A></B>(<A HREF="http://developer.android.com/reference/android/net/Uri.html?is-external=true" title="class or interface in android.net">Uri</A>&nbsp;contentUri)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;<A HREF="http://developer.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../org/beryl/intents/android/Gallery.html#uriToPhysicalPath(android.content.Context, android.net.Uri)">uriToPhysicalPath</A></B>(<A HREF="http://developer.android.com/reference/android/content/Context.html?is-external=true" title="class or interface in android.content">Context</A>&nbsp;context,
+                  <A HREF="http://developer.android.com/reference/android/net/Uri.html?is-external=true" title="class or interface in android.net">Uri</A>&nbsp;fileUri)</CODE>
 
 <BR>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
@@ -229,6 +296,42 @@ public <B>Gallery</B>()</PRE>
 <B>Method Detail</B></FONT></TH>
 </TR>
 </TABLE>
+
+<A NAME="loadBitmapFromUri(android.content.Context, android.net.Uri)"><!-- --></A><H3>
+loadBitmapFromUri</H3>
+<PRE>
+public static final <A HREF="http://developer.android.com/reference/android/graphics/Bitmap.html?is-external=true" title="class or interface in android.graphics">Bitmap</A> <B>loadBitmapFromUri</B>(<A HREF="http://developer.android.com/reference/android/content/Context.html?is-external=true" title="class or interface in android.content">Context</A>&nbsp;context,
+                                             <A HREF="http://developer.android.com/reference/android/net/Uri.html?is-external=true" title="class or interface in android.net">Uri</A>&nbsp;fileUri)</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="uriToPhysicalPath(android.content.Context, android.net.Uri)"><!-- --></A><H3>
+uriToPhysicalPath</H3>
+<PRE>
+public static <A HREF="http://developer.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A> <B>uriToPhysicalPath</B>(<A HREF="http://developer.android.com/reference/android/content/Context.html?is-external=true" title="class or interface in android.content">Context</A>&nbsp;context,
+                                       <A HREF="http://developer.android.com/reference/android/net/Uri.html?is-external=true" title="class or interface in android.net">Uri</A>&nbsp;fileUri)</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="findPictureFilePath(android.content.Context, android.net.Uri)"><!-- --></A><H3>
+findPictureFilePath</H3>
+<PRE>
+public static final <A HREF="http://developer.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A> <B>findPictureFilePath</B>(<A HREF="http://developer.android.com/reference/android/content/Context.html?is-external=true" title="class or interface in android.content">Context</A>&nbsp;context,
+                                               <A HREF="http://developer.android.com/reference/android/net/Uri.html?is-external=true" title="class or interface in android.net">Uri</A>&nbsp;dataUri)</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
 
 <A NAME="getImage()"><!-- --></A><H3>
 getImage</H3>
@@ -274,11 +377,10 @@ public static final <A HREF="http://developer.android.com/reference/android/cont
 </DL>
 <HR>
 
-<A NAME="fromSEND_getImage(android.content.Context, android.content.Intent)"><!-- --></A><H3>
-fromSEND_getImage</H3>
+<A NAME="sendImage(java.lang.String)"><!-- --></A><H3>
+sendImage</H3>
 <PRE>
-public static <A HREF="http://developer.android.com/reference/android/graphics/Bitmap.html?is-external=true" title="class or interface in android.graphics">Bitmap</A> <B>fromSEND_getImage</B>(<A HREF="http://developer.android.com/reference/android/content/Context.html?is-external=true" title="class or interface in android.content">Context</A>&nbsp;context,
-                                       <A HREF="http://developer.android.com/reference/android/content/Intent.html?is-external=true" title="class or interface in android.content">Intent</A>&nbsp;data)</PRE>
+public static final <A HREF="http://developer.android.com/reference/android/content/Intent.html?is-external=true" title="class or interface in android.content">Intent</A> <B>sendImage</B>(<A HREF="http://developer.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;filePath)</PRE>
 <DL>
 <DD><DL>
 </DL>
@@ -286,11 +388,22 @@ public static <A HREF="http://developer.android.com/reference/android/graphics/B
 </DL>
 <HR>
 
-<A NAME="onActivityResult_getImage(android.content.Context, android.content.Intent)"><!-- --></A><H3>
-onActivityResult_getImage</H3>
+<A NAME="sendImage(android.net.Uri)"><!-- --></A><H3>
+sendImage</H3>
 <PRE>
-public static <A HREF="http://developer.android.com/reference/android/graphics/Bitmap.html?is-external=true" title="class or interface in android.graphics">Bitmap</A> <B>onActivityResult_getImage</B>(<A HREF="http://developer.android.com/reference/android/content/Context.html?is-external=true" title="class or interface in android.content">Context</A>&nbsp;context,
-                                               <A HREF="http://developer.android.com/reference/android/content/Intent.html?is-external=true" title="class or interface in android.content">Intent</A>&nbsp;data)</PRE>
+public static final <A HREF="http://developer.android.com/reference/android/content/Intent.html?is-external=true" title="class or interface in android.content">Intent</A> <B>sendImage</B>(<A HREF="http://developer.android.com/reference/android/net/Uri.html?is-external=true" title="class or interface in android.net">Uri</A>&nbsp;contentUri)</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="deleteImageUri(android.content.Context, android.net.Uri)"><!-- --></A><H3>
+deleteImageUri</H3>
+<PRE>
+public static void <B>deleteImageUri</B>(<A HREF="http://developer.android.com/reference/android/content/Context.html?is-external=true" title="class or interface in android.content">Context</A>&nbsp;context,
+                                  <A HREF="http://developer.android.com/reference/android/net/Uri.html?is-external=true" title="class or interface in android.net">Uri</A>&nbsp;imageUri)</PRE>
 <DL>
 <DD><DL>
 </DL>
@@ -340,8 +453,8 @@ $.beautyOfCode.init({
 
 <TR>
 <TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
-&nbsp;<A HREF="../../../../org/beryl/intents/android/Camera.html" title="class in org.beryl.intents.android"><B>PREV CLASS</B></A>&nbsp;
-&nbsp;<A HREF="../../../../org/beryl/intents/android/Market.html" title="class in org.beryl.intents.android"><B>NEXT CLASS</B></A></FONT></TD>
+&nbsp;<A HREF="../../../../org/beryl/intents/android/Email.Send.html" title="class in org.beryl.intents.android"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;<A HREF="../../../../org/beryl/intents/android/Gallery.GetImage.html" title="class in org.beryl.intents.android"><B>NEXT CLASS</B></A></FONT></TD>
 <TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
   <A HREF="../../../../index.html?org/beryl/intents/android/Gallery.html" target="_top"><B>FRAMES</B></A>  &nbsp;
 &nbsp;<A HREF="Gallery.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
@@ -361,7 +474,7 @@ $.beautyOfCode.init({
 </TR>
 <TR>
 <TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
-  SUMMARY:&nbsp;NESTED&nbsp;|&nbsp;FIELD&nbsp;|&nbsp;<A HREF="#constructor_summary">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+  SUMMARY:&nbsp;<A HREF="#nested_class_summary">NESTED</A>&nbsp;|&nbsp;FIELD&nbsp;|&nbsp;<A HREF="#constructor_summary">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
 <TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
 DETAIL:&nbsp;FIELD&nbsp;|&nbsp;<A HREF="#constructor_detail">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
 </TR>

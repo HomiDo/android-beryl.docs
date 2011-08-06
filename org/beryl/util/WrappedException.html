@@ -123,9 +123,9 @@ In Java-land there are checked exceptions which sometimes are annoying to use.
  Sometimes they are not appropriate to use since the exception handling may occur many levels above where the exception is thrown.
  WrappedExceptions basically wrapper any <A HREF="http://developer.android.com/reference/java/lang/Exception.html?is-external=true" title="class or interface in java.lang"><CODE>Exception</CODE></A> into a <A HREF="http://developer.android.com/reference/java/lang/RuntimeException.html?is-external=true" title="class or interface in java.lang"><CODE>RuntimeException</CODE></A> this relaxes the need to have
  throws clauses in method signatures.
- 
+
  <h2>Notes</h2> You cannot instantiate this class directly. Use <A HREF="../../../org/beryl/util/WrappedException.html#wrap(java.lang.Exception)"><CODE>wrap(Exception)</CODE></A> or <A HREF="../../../org/beryl/util/Exceptions.html#wrapAndThrow(java.lang.Exception)"><CODE>Exceptions.wrapAndThrow(Exception)</CODE></A>.
- 
+
 <h2>Recommended Usage</h2>
 <pre class="code"><code class="java">
 

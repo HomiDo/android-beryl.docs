@@ -5,10 +5,12 @@ org.beryl.content.webfeeds.rss
 org.beryl.database
 org.beryl.deployment
 org.beryl.diagnostics
+org.beryl.graphics
 org.beryl.intents
 org.beryl.intents.android
 org.beryl.io
 org.beryl.location
+org.beryl.media
 org.beryl.util
 org.beryl.web.cache
 org.beryl.web.http

@@ -67,7 +67,7 @@ $.beautyOfCode.init({
 <TR>
 <TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
 &nbsp;<A HREF="../../../org/beryl/diagnostics/LogCatLogWriter.html" title="class in org.beryl.diagnostics"><B>PREV CLASS</B></A>&nbsp;
-&nbsp;<A HREF="../../../org/beryl/diagnostics/StrictModeEnabler.html" title="class in org.beryl.diagnostics"><B>NEXT CLASS</B></A></FONT></TD>
+&nbsp;<A HREF="../../../org/beryl/diagnostics/NonCriticalThrowableHandler.html" title="interface in org.beryl.diagnostics"><B>NEXT CLASS</B></A></FONT></TD>
 <TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
   <A HREF="../../../index.html?org/beryl/diagnostics/Logger.html" target="_top"><B>FRAMES</B></A>  &nbsp;
 &nbsp;<A HREF="Logger.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
@@ -139,6 +139,14 @@ Class Logger</H2>
 <TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
 <TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
 <B>Method Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../org/beryl/diagnostics/Logger.html#d(android.os.Bundle)">d</A></B>(<A HREF="http://developer.android.com/reference/android/os/Bundle.html?is-external=true" title="class or interface in android.os">Bundle</A>&nbsp;bundle)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
@@ -236,6 +244,23 @@ Class Logger</H2>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
 <CODE>static&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../org/beryl/diagnostics/Logger.html#e(java.lang.String, java.lang.Throwable)">e</A></B>(<A HREF="http://developer.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;tag,
+  <A HREF="http://developer.android.com/reference/java/lang/Throwable.html?is-external=true" title="class or interface in java.lang">Throwable</A>&nbsp;tr)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../org/beryl/diagnostics/Logger.html#e(java.lang.Throwable)">e</A></B>(<A HREF="http://developer.android.com/reference/java/lang/Throwable.html?is-external=true" title="class or interface in java.lang">Throwable</A>&nbsp;tr)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;void</CODE></FONT></TD>
 <TD><CODE><B><A HREF="../../../org/beryl/diagnostics/Logger.html#i(java.lang.Object)">i</A></B>(<A HREF="http://developer.android.com/reference/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</A>&nbsp;obj)</CODE>
 
 <BR>
@@ -273,7 +298,7 @@ Class Logger</H2>
 <TD><CODE><B><A HREF="../../../org/beryl/diagnostics/Logger.html#inspectClass(java.lang.Class)">inspectClass</A></B>(<A HREF="http://developer.android.com/reference/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</A>&lt;?&gt;&nbsp;clazz)</CODE>
 
 <BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Reports methods, fields, annotations, and other information of the class to the log.</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
@@ -281,7 +306,7 @@ Class Logger</H2>
 <TD><CODE><B><A HREF="../../../org/beryl/diagnostics/Logger.html#inspectCursorData(android.database.Cursor)">inspectCursorData</A></B>(<A HREF="http://developer.android.com/reference/android/database/Cursor.html?is-external=true" title="class or interface in android.database">Cursor</A>&nbsp;cur)</CODE>
 
 <BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dump only the data within context of the Cursor object.</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
@@ -289,7 +314,7 @@ Class Logger</H2>
 <TD><CODE><B><A HREF="../../../org/beryl/diagnostics/Logger.html#inspectQueryResult(android.database.Cursor)">inspectQueryResult</A></B>(<A HREF="http://developer.android.com/reference/android/database/Cursor.html?is-external=true" title="class or interface in android.database">Cursor</A>&nbsp;cur)</CODE>
 
 <BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dump data out all the data from a Cursor to the log.</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
@@ -305,7 +330,7 @@ Class Logger</H2>
 <TD><CODE><B><A HREF="../../../org/beryl/diagnostics/Logger.html#probe(java.lang.Object)">probe</A></B>(<A HREF="http://developer.android.com/reference/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</A>&nbsp;obj)</CODE>
 
 <BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Reports methods, fields, annotations, and other information and their values from the object.</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
@@ -512,6 +537,17 @@ public static void <B>e</B>(<A HREF="http://developer.android.com/reference/java
 </DL>
 <HR>
 
+<A NAME="e(java.lang.Throwable)"><!-- --></A><H3>
+e</H3>
+<PRE>
+public static void <B>e</B>(<A HREF="http://developer.android.com/reference/java/lang/Throwable.html?is-external=true" title="class or interface in java.lang">Throwable</A>&nbsp;tr)</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
 <A NAME="e(java.lang.String)"><!-- --></A><H3>
 e</H3>
 <PRE>
@@ -601,10 +637,33 @@ public static void <B>e</B>(<A HREF="http://developer.android.com/reference/java
 </DL>
 <HR>
 
+<A NAME="e(java.lang.String, java.lang.Throwable)"><!-- --></A><H3>
+e</H3>
+<PRE>
+public static void <B>e</B>(<A HREF="http://developer.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;tag,
+                     <A HREF="http://developer.android.com/reference/java/lang/Throwable.html?is-external=true" title="class or interface in java.lang">Throwable</A>&nbsp;tr)</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
 <A NAME="d(android.content.Intent)"><!-- --></A><H3>
 d</H3>
 <PRE>
 public static void <B>d</B>(<A HREF="http://developer.android.com/reference/android/content/Intent.html?is-external=true" title="class or interface in android.content">Intent</A>&nbsp;intent)</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="d(android.os.Bundle)"><!-- --></A><H3>
+d</H3>
+<PRE>
+public static void <B>d</B>(<A HREF="http://developer.android.com/reference/android/os/Bundle.html?is-external=true" title="class or interface in android.os">Bundle</A>&nbsp;bundle)</PRE>
 <DL>
 <DD><DL>
 </DL>
@@ -617,6 +676,8 @@ inspectClass</H3>
 <PRE>
 public static void <B>inspectClass</B>(<A HREF="http://developer.android.com/reference/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</A>&lt;?&gt;&nbsp;clazz)</PRE>
 <DL>
+<DD>Reports methods, fields, annotations, and other information of the class to the log.
+<P>
 <DD><DL>
 </DL>
 </DD>
@@ -628,6 +689,8 @@ inspectQueryResult</H3>
 <PRE>
 public static void <B>inspectQueryResult</B>(<A HREF="http://developer.android.com/reference/android/database/Cursor.html?is-external=true" title="class or interface in android.database">Cursor</A>&nbsp;cur)</PRE>
 <DL>
+<DD>Dump data out all the data from a Cursor to the log.
+<P>
 <DD><DL>
 </DL>
 </DD>
@@ -639,6 +702,8 @@ inspectCursorData</H3>
 <PRE>
 public static void <B>inspectCursorData</B>(<A HREF="http://developer.android.com/reference/android/database/Cursor.html?is-external=true" title="class or interface in android.database">Cursor</A>&nbsp;cur)</PRE>
 <DL>
+<DD>Dump only the data within context of the Cursor object.
+<P>
 <DD><DL>
 </DL>
 </DD>
@@ -650,6 +715,8 @@ probe</H3>
 <PRE>
 public static void <B>probe</B>(<A HREF="http://developer.android.com/reference/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</A>&nbsp;obj)</PRE>
 <DL>
+<DD>Reports methods, fields, annotations, and other information and their values from the object.
+<P>
 <DD><DL>
 </DL>
 </DD>
@@ -699,7 +766,7 @@ $.beautyOfCode.init({
 <TR>
 <TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
 &nbsp;<A HREF="../../../org/beryl/diagnostics/LogCatLogWriter.html" title="class in org.beryl.diagnostics"><B>PREV CLASS</B></A>&nbsp;
-&nbsp;<A HREF="../../../org/beryl/diagnostics/StrictModeEnabler.html" title="class in org.beryl.diagnostics"><B>NEXT CLASS</B></A></FONT></TD>
+&nbsp;<A HREF="../../../org/beryl/diagnostics/NonCriticalThrowableHandler.html" title="interface in org.beryl.diagnostics"><B>NEXT CLASS</B></A></FONT></TD>
 <TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
   <A HREF="../../../index.html?org/beryl/diagnostics/Logger.html" target="_top"><B>FRAMES</B></A>  &nbsp;
 &nbsp;<A HREF="Logger.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;

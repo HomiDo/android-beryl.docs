@@ -113,10 +113,10 @@ Interface IDatabaseUpdateScript</H2>
 <P>
 Contract for database update routines.
  Update scripts will only be called when the database detects that it needs to be upgraded.
- Scripts are guaranteed to run in sequential order and only need to assume that they will run from the previous 
+ Scripts are guaranteed to run in sequential order and only need to assume that they will run from the previous
  version of the database schema. IE: Version 5 script will run only against version 4 databases.
  An exception is the create script which will run from an empty database.
- 
+
  Typically this interface is not implemented directly.
  Extend from either <A HREF="../../../org/beryl/database/DatabaseCreateScript.html" title="class in org.beryl.database"><CODE>DatabaseCreateScript</CODE></A> or <A HREF="../../../org/beryl/database/DatabaseUpdateScript.html" title="class in org.beryl.database"><CODE>DatabaseUpdateScript</CODE></A>.
 <P>
