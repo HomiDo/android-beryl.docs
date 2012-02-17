@@ -1,5 +1,7 @@
 org.beryl
 org.beryl.app
+org.beryl.concurrent
+org.beryl.content
 org.beryl.content.webfeeds
 org.beryl.content.webfeeds.rss
 org.beryl.database
@@ -11,6 +13,7 @@ org.beryl.intents.android
 org.beryl.io
 org.beryl.location
 org.beryl.media
+org.beryl.net
 org.beryl.util
 org.beryl.web.cache
 org.beryl.web.http
